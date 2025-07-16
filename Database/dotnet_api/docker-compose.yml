@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # SQL Server Database
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: filemanagement-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=StrongPassword123!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    networks:
+      - filemanagement-network
+
+  # MinIO Object Storage
+  minio:
+    image: minio/minio:latest
+    container_name: filemanagement-minio
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+    networks:
+      - filemanagement-network
+
+  # .NET Core API
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: filemanagement-api
+    depends_on:
+      - sqlserver
+      - minio
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=FileManagementDB;User Id=sa;Password=StrongPassword123!;TrustServerCertificate=true
+      - MinIO__Endpoint=minio:9000
+      - MinIO__AccessKey=minioadmin
+      - MinIO__SecretKey=minioadmin
+      - MinIO__UseSSL=false
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    networks:
+      - filemanagement-network
+
+volumes:
+  sqlserver-data:
+  minio-data:
+
+networks:
+  filemanagement-network:
+    driver: bridge

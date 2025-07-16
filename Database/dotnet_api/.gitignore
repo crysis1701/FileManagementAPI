@@ -1,0 +1,65 @@
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Ignore user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore Visual Studio files
+.vs/
+*.vscode/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Ignore test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+.env.local
+.env.production
+
+# Ignore uploaded files (in development)
+uploads/
+temp/
+
+# Ignore database files
+*.mdf
+*.ldf
+
+# Ignore Docker files
+.dockerignore
+
+# Ignore publish profiles
+Properties/PublishProfiles/
+
+# Ignore IDE files
+*.swp
+*.swo
+*~
+
+# Ignore MinIO data
+minio-data/

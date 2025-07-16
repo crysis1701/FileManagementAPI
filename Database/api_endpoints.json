@@ -1,0 +1,493 @@
+{
+  "api_endpoints": {
+    "get_all_tabs": {
+      "method": "GET",
+      "url": "/api/tabs",
+      "description": "Lấy danh sách tất cả tab và file",
+      "response": "Xem file sample_json_response.json"
+    },
+    "get_tab_by_id": {
+      "method": "GET",
+      "url": "/api/tabs/{tab_id}",
+      "description": "Lấy dữ liệu của 1 tab cụ thể",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "tab_info": {
+            "tab_id": 1,
+            "tab_code": "TAB_A",
+            "tab_name": "Tab A - Tài liệu hành chính",
+            "tab_description": "Quản lý các tài liệu hành chính",
+            "sort_order": 1,
+            "is_active": true
+          },
+          "categories": [
+            {
+              "category_info": {
+                "category_id": 1,
+                "category_code": "B",
+                "category_name": "Mục B - Báo cáo",
+                "file_count": 2
+              },
+              "files": [
+                {
+                  "file_id": "550e8400-e29b-41d4-a716-446655440001",
+                  "file_name": "Báo cáo tháng 1-2024",
+                  "uploaded_by": {
+                    "full_name": "Trần Thị Bình"
+                  },
+                  "department": {
+                    "department_name": "Phòng Nhân sự"
+                  },
+                  "upload_date": "2024-01-15T09:00:00Z",
+                  "upload_date_display": "15/01/2024 09:00",
+                  "last_action": {
+                    "action_display": "Tải xuống"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "get_category_files": {
+      "method": "GET",
+      "url": "/api/tabs/{tab_id}/categories/{category_id}/files",
+      "description": "Lấy file của 1 mục cụ thể",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "category_info": {
+            "category_id": 1,
+            "category_code": "B",
+            "category_name": "Mục B - Báo cáo",
+            "tab_name": "Tab A - Tài liệu hành chính"
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440001",
+              "file_name": "Báo cáo tháng 1-2024",
+              "uploaded_by": {
+                "employee_id": 2,
+                "full_name": "Trần Thị Bình",
+                "position": "Chuyên viên HR"
+              },
+              "department": {
+                "department_name": "Phòng Nhân sự"
+              },
+              "upload_date": "2024-01-15T09:00:00Z",
+              "upload_date_display": "15/01/2024 09:00",
+              "last_action": {
+                "action_type": "DOWNLOAD",
+                "action_display": "Tải xuống",
+                "performed_by": "Lê Văn Cường",
+                "action_date_display": "17/01/2024 11:00"
+              },
+              "file_size_display": "1.00 MB",
+              "download_count": 2,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": false,
+                "can_delete": false
+              }
+            }
+          ],
+          "pagination": {
+            "current_page": 1,
+            "per_page": 10,
+            "total_items": 2,
+            "total_pages": 1
+          }
+        }
+      }
+    },
+    "get_file_details": {
+      "method": "GET",
+      "url": "/api/files/{file_id}",
+      "description": "Lấy chi tiết 1 file",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "file_info": {
+            "file_id": "550e8400-e29b-41d4-a716-446655440001",
+            "file_name": "Báo cáo tháng 1-2024",
+            "original_filename": "bao-cao-thang-1-2024.pdf",
+            "file_extension": ".pdf",
+            "file_size": 1024000,
+            "file_size_display": "1.00 MB",
+            "mime_type": "application/pdf",
+            "description": "Báo cáo tổng kết tháng 1/2024",
+            "version": 1,
+            "is_current_version": true,
+            "download_count": 2,
+            "upload_date": "2024-01-15T09:00:00Z",
+            "upload_date_display": "15/01/2024 09:00"
+          },
+          "tab_info": {
+            "tab_name": "Tab A - Tài liệu hành chính"
+          },
+          "category_info": {
+            "category_name": "Mục B - Báo cáo"
+          },
+          "uploaded_by": {
+            "employee_id": 2,
+            "employee_code": "EMP002",
+            "full_name": "Trần Thị Bình",
+            "position": "Chuyên viên HR",
+            "email": "binh.tran@company.com"
+          },
+          "department": {
+            "department_id": 2,
+            "department_code": "HR",
+            "department_name": "Phòng Nhân sự"
+          },
+          "permissions": {
+            "can_read": true,
+            "can_download": true,
+            "can_edit": false,
+            "can_delete": false
+          },
+          "recent_actions": [
+            {
+              "action_type": "DOWNLOAD",
+              "action_display": "Tải xuống",
+              "performed_by": "Lê Văn Cường",
+              "action_date": "2024-01-17T11:00:00Z",
+              "action_date_display": "17/01/2024 11:00",
+              "ip_address": "192.168.1.100",
+              "notes": "Download để phân tích"
+            },
+            {
+              "action_type": "DOWNLOAD",
+              "action_display": "Tải xuống",
+              "performed_by": "Nguyễn Văn An",
+              "action_date": "2024-01-16T15:30:00Z",
+              "action_date_display": "16/01/2024 15:30",
+              "ip_address": "192.168.1.101",
+              "notes": "Download để xem xét"
+            },
+            {
+              "action_type": "UPLOAD",
+              "action_display": "Tải lên",
+              "performed_by": "Trần Thị Bình",
+              "action_date": "2024-01-15T09:00:00Z",
+              "action_date_display": "15/01/2024 09:00",
+              "ip_address": "192.168.1.102",
+              "notes": "Upload báo cáo tháng 1"
+            }
+          ]
+        }
+      }
+    },
+    "upload_file": {
+      "method": "POST",
+      "url": "/api/files/upload",
+      "description": "Upload file mới",
+      "request_body": {
+        "tab_id": 1,
+        "category_id": 1,
+        "file_name": "Báo cáo tháng 3-2024",
+        "description": "Báo cáo tổng kết tháng 3/2024",
+        "file_data": "base64_encoded_file_content"
+      },
+      "sample_response": {
+        "status": "success",
+        "message": "File uploaded successfully",
+        "data": {
+          "file_id": "550e8400-e29b-41d4-a716-446655440010",
+          "file_name": "Báo cáo tháng 3-2024",
+          "original_filename": "bao-cao-thang-3-2024.pdf",
+          "file_size": 1150000,
+          "file_size_display": "1.10 MB",
+          "upload_date": "2024-07-16T10:30:00Z",
+          "upload_date_display": "16/07/2024 10:30",
+          "uploaded_by": {
+            "full_name": "Trần Thị Bình"
+          },
+          "department": {
+            "department_name": "Phòng Nhân sự"
+          },
+          "tab_name": "Tab A - Tài liệu hành chính",
+          "category_name": "Mục B - Báo cáo"
+        }
+      }
+    },
+    "download_file": {
+      "method": "GET",
+      "url": "/api/files/{file_id}/download",
+      "description": "Download file",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "file_id": "550e8400-e29b-41d4-a716-446655440001",
+          "file_name": "Báo cáo tháng 1-2024",
+          "original_filename": "bao-cao-thang-1-2024.pdf",
+          "mime_type": "application/pdf",
+          "file_size": 1024000,
+          "download_url": "https://api.company.com/files/download/550e8400-e29b-41d4-a716-446655440001",
+          "expires_at": "2024-07-16T11:30:00Z",
+          "download_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        }
+      }
+    },
+    "search_files": {
+      "method": "GET",
+      "url": "/api/files/search?q={query}&tab_id={tab_id}&category_id={category_id}&uploaded_by={employee_id}",
+      "description": "Tìm kiếm file",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "query": "báo cáo",
+          "filters": {
+            "tab_id": 1,
+            "category_id": null,
+            "uploaded_by": null,
+            "date_from": null,
+            "date_to": null
+          },
+          "results": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440001",
+              "file_name": "Báo cáo tháng 1-2024",
+              "tab_name": "Tab A - Tài liệu hành chính",
+              "category_name": "Mục B - Báo cáo",
+              "uploaded_by": {
+                "full_name": "Trần Thị Bình"
+              },
+              "department": {
+                "department_name": "Phòng Nhân sự"
+              },
+              "upload_date": "2024-01-15T09:00:00Z",
+              "upload_date_display": "15/01/2024 09:00",
+              "file_size_display": "1.00 MB",
+              "relevance_score": 0.95
+            }
+          ],
+          "pagination": {
+            "current_page": 1,
+            "per_page": 10,
+            "total_items": 2,
+            "total_pages": 1
+          }
+        }
+      }
+    },
+    "get_statistics": {
+      "method": "GET",
+      "url": "/api/statistics",
+      "description": "Lấy thống kê tổng quan",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "overview": {
+            "total_tabs": 2,
+            "total_categories": 8,
+            "total_files": 9,
+            "total_size": 9136000,
+            "total_size_display": "8.71 MB",
+            "total_downloads": 4,
+            "active_users": 4
+          },
+          "by_tab": [
+            {
+              "tab_name": "Tab A - Tài liệu hành chính",
+              "file_count": 5,
+              "total_size": 3072000,
+              "total_size_display": "2.93 MB",
+              "download_count": 3,
+              "latest_upload": "2024-02-15T09:00:00Z"
+            },
+            {
+              "tab_name": "Tab B - Tài liệu kỹ thuật",
+              "file_count": 4,
+              "total_size": 6064000,
+              "total_size_display": "5.78 MB",
+              "download_count": 1,
+              "latest_upload": "2024-01-30T09:20:00Z"
+            }
+          ],
+          "by_department": [
+            {
+              "department_name": "Phòng Kỹ thuật",
+              "file_count": 4,
+              "total_size": 6064000,
+              "employee_count": 1,
+              "download_count": 1
+            },
+            {
+              "department_name": "Phòng Nhân sự",
+              "file_count": 2,
+              "total_size": 2148000,
+              "employee_count": 1,
+              "download_count": 2
+            }
+          ],
+          "recent_activities": [
+            {
+              "action_type": "UPLOAD",
+              "action_display": "Tải lên",
+              "file_name": "Báo cáo tháng 2-2024",
+              "performed_by": "Trần Thị Bình",
+              "action_date": "2024-02-15T09:00:00Z",
+              "action_date_display": "15/02/2024 09:00"
+            }
+          ]
+        }
+      }
+    },
+    "get_user_permissions": {
+      "method": "GET",
+      "url": "/api/users/{user_id}/permissions",
+      "description": "Lấy quyền của user",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "user_info": {
+            "user_id": 1,
+            "user_name": "Nguyễn Văn An",
+            "role": "Admin",
+            "department": "Phòng Công nghệ thông tin"
+          },
+          "global_permissions": {
+            "can_upload": true,
+            "can_manage_permissions": true,
+            "can_delete_files": true,
+            "can_view_all_files": true
+          },
+          "department_permissions": [
+            {
+              "department_name": "Phòng Công nghệ thông tin",
+              "permission_type": "FULL"
+            },
+            {
+              "department_name": "Phòng Nhân sự",
+              "permission_type": "READ"
+            }
+          ],
+          "file_permissions": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440001",
+              "file_name": "Báo cáo tháng 1-2024",
+              "permission_type": "FULL",
+              "granted_by": "System",
+              "granted_at": "2024-01-15T09:00:00Z"
+            }
+          ]
+        }
+      }
+    },
+    "toggle_file_active": {
+      "method": "PUT",
+      "url": "/api/files/{file_id}/toggle-active",
+      "description": "Kích hoạt hoặc hủy kích hoạt file",
+      "request_body": {
+        "is_active": true
+      },
+      "sample_response": {
+        "status": "success",
+        "message": "File đã được kích hoạt",
+        "data": {
+          "file_id": "550e8400-e29b-41d4-a716-446655440001",
+          "file_name": "Báo cáo tháng 1-2024",
+          "is_active": true,
+          "updated_at": "2024-07-16T10:30:00Z"
+        }
+      }
+    },
+    "get_files_by_status": {
+      "method": "GET",
+      "url": "/api/files/status?is_active={true|false}&tab_id={tab_id}&category_id={category_id}",
+      "description": "Lấy file theo trạng thái active/inactive",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "filters": {
+            "is_active": true,
+            "tab_id": 1,
+            "category_id": null
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440001",
+              "file_name": "Báo cáo tháng 1-2024",
+              "is_active": true,
+              "status_display": "Đang hoạt động",
+              "status_code": "active",
+              "tab_name": "Tab A - Tài liệu hành chính",
+              "category_name": "Mục B - Báo cáo",
+              "uploaded_by": "Trần Thị Bình",
+              "department_name": "Phòng Nhân sự",
+              "upload_date": "2024-01-15T09:00:00Z",
+              "upload_date_display": "15/01/2024 09:00",
+              "file_size_display": "1.00 MB",
+              "download_count": 2
+            }
+          ],
+          "statistics": {
+            "total_files": 8,
+            "active_files": 7,
+            "inactive_files": 1,
+            "active_percentage": 87.5
+          }
+        }
+      }
+    },
+    "get_file_status_statistics": {
+      "method": "GET",
+      "url": "/api/files/status/statistics",
+      "description": "Lấy thống kê trạng thái file",
+      "sample_response": {
+        "status": "success",
+        "data": {
+          "overview": {
+            "total_files": 9,
+            "active_files": 7,
+            "inactive_files": 2,
+            "active_percentage": 77.78
+          },
+          "by_tab": [
+            {
+              "tab_name": "Tab A - Tài liệu hành chính",
+              "total_files": 5,
+              "active_files": 4,
+              "inactive_files": 1,
+              "active_percentage": 80.0
+            },
+            {
+              "tab_name": "Tab B - Tài liệu kỹ thuật",
+              "total_files": 4,
+              "active_files": 3,
+              "inactive_files": 1,
+              "active_percentage": 75.0
+            }
+          ],
+          "by_department": [
+            {
+              "department_name": "Phòng Kỹ thuật",
+              "total_files": 4,
+              "active_files": 3,
+              "inactive_files": 1,
+              "active_percentage": 75.0
+            },
+            {
+              "department_name": "Phòng Nhân sự",
+              "total_files": 2,
+              "active_files": 2,
+              "inactive_files": 0,
+              "active_percentage": 100.0
+            },
+            {
+              "department_name": "Phòng Hành chính",
+              "total_files": 3,
+              "active_files": 2,
+              "inactive_files": 1,
+              "active_percentage": 66.67
+            }
+          ]
+        }
+      }
+    }
+  }
+}

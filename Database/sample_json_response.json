@@ -1,0 +1,513 @@
+{
+  "status": "success",
+  "message": "Lấy dữ liệu thành công",
+  "timestamp": "2025-07-16T10:30:00Z",
+  "data": {
+    "tab_a": {
+      "tab_info": {
+        "tab_id": 1,
+        "tab_code": "TAB_A",
+        "tab_name": "Tab A - Tài liệu hành chính",
+        "tab_description": "Quản lý các tài liệu hành chính",
+        "sort_order": 1,
+        "is_active": true
+      },
+      "categories": [
+        {
+          "category_info": {
+            "category_id": 1,
+            "category_code": "B",
+            "category_name": "Mục B - Báo cáo",
+            "category_description": "Các báo cáo định kỳ",
+            "sort_order": 1,
+            "file_count": 2
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440001",
+              "file_name": "Báo cáo tháng 1-2024",
+              "original_filename": "bao-cao-thang-1-2024.pdf",
+              "file_extension": ".pdf",
+              "file_size": 1024000,
+              "file_size_display": "1.00 MB",
+              "mime_type": "application/pdf",
+              "uploaded_by": {
+                "employee_id": 2,
+                "employee_code": "EMP002",
+                "full_name": "Trần Thị Bình",
+                "position": "Chuyên viên HR"
+              },
+              "department": {
+                "department_id": 2,
+                "department_code": "HR",
+                "department_name": "Phòng Nhân sự"
+              },
+              "upload_date": "2024-01-15T09:00:00Z",
+              "upload_date_display": "15/01/2024 09:00",
+              "last_action": {
+                "action_type": "DOWNLOAD",
+                "action_display": "Tải xuống",
+                "performed_by": "Lê Văn Cường",
+                "action_date": "2024-01-17T11:00:00Z",
+                "action_date_display": "17/01/2024 11:00"
+              },
+              "description": "Báo cáo tổng kết tháng 1/2024",
+              "version": 1,
+              "is_current_version": true,
+              "is_active": true,
+              "download_count": 2,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": false,
+                "can_delete": false
+              }
+            },
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440002",
+              "file_name": "Báo cáo tháng 2-2024",
+              "original_filename": "bao-cao-thang-2-2024.pdf",
+              "file_extension": ".pdf",
+              "file_size": 1124000,
+              "file_size_display": "1.07 MB",
+              "mime_type": "application/pdf",
+              "uploaded_by": {
+                "employee_id": 2,
+                "employee_code": "EMP002",
+                "full_name": "Trần Thị Bình",
+                "position": "Chuyên viên HR"
+              },
+              "department": {
+                "department_id": 2,
+                "department_code": "HR",
+                "department_name": "Phòng Nhân sự"
+              },
+              "upload_date": "2024-02-15T09:00:00Z",
+              "upload_date_display": "15/02/2024 09:00",
+              "last_action": {
+                "action_type": "UPLOAD",
+                "action_display": "Tải lên",
+                "performed_by": "Trần Thị Bình",
+                "action_date": "2024-02-15T09:00:00Z",
+                "action_date_display": "15/02/2024 09:00"
+              },
+              "description": "Báo cáo tổng kết tháng 2/2024",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 0,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": false,
+                "can_delete": false
+              }
+            }
+          ]
+        },
+        {
+          "category_info": {
+            "category_id": 2,
+            "category_code": "C",
+            "category_name": "Mục C - Công văn",
+            "category_description": "Công văn đi và đến",
+            "sort_order": 2,
+            "file_count": 2
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440003",
+              "file_name": "Công văn 001/2024",
+              "original_filename": "cong-van-001-2024.docx",
+              "file_extension": ".docx",
+              "file_size": 512000,
+              "file_size_display": "500.00 KB",
+              "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "uploaded_by": {
+                "employee_id": 5,
+                "employee_code": "EMP005",
+                "full_name": "Hoàng Văn Em",
+                "position": "Chuyên viên hành chính"
+              },
+              "department": {
+                "department_id": 5,
+                "department_code": "ADMIN",
+                "department_name": "Phòng Hành chính"
+              },
+              "upload_date": "2024-01-10T14:30:00Z",
+              "upload_date_display": "10/01/2024 14:30",
+              "last_action": {
+                "action_type": "DOWNLOAD",
+                "action_display": "Tải xuống",
+                "performed_by": "Nguyễn Văn An",
+                "action_date": "2024-01-11T08:45:00Z",
+                "action_date_display": "11/01/2024 08:45"
+              },
+              "description": "Công văn về tổ chức cuộc họp",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 1,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": true,
+                "can_delete": false
+              }
+            },
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440004",
+              "file_name": "Công văn 002/2024",
+              "original_filename": "cong-van-002-2024.docx",
+              "file_extension": ".docx",
+              "file_size": 612000,
+              "file_size_display": "597.66 KB",
+              "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "uploaded_by": {
+                "employee_id": 5,
+                "employee_code": "EMP005",
+                "full_name": "Hoàng Văn Em",
+                "position": "Chuyên viên hành chính"
+              },
+              "department": {
+                "department_id": 5,
+                "department_code": "ADMIN",
+                "department_name": "Phòng Hành chính"
+              },
+              "upload_date": "2024-01-12T16:20:00Z",
+              "upload_date_display": "12/01/2024 16:20",
+              "last_action": {
+                "action_type": "UPLOAD",
+                "action_display": "Tải lên",
+                "performed_by": "Hoàng Văn Em",
+                "action_date": "2024-01-12T16:20:00Z",
+                "action_date_display": "12/01/2024 16:20"
+              },
+              "description": "Công văn về quy định mới",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 0,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": false,
+                "can_delete": false
+              }
+            }
+          ]
+        },
+        {
+          "category_info": {
+            "category_id": 3,
+            "category_code": "D",
+            "category_name": "Mục D - Quyết định",
+            "category_description": "Các quyết định của lãnh đạo",
+            "sort_order": 3,
+            "file_count": 1
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440005",
+              "file_name": "Quyết định 01/2024",
+              "original_filename": "quyet-dinh-01-2024.pdf",
+              "file_extension": ".pdf",
+              "file_size": 824000,
+              "file_size_display": "804.69 KB",
+              "mime_type": "application/pdf",
+              "uploaded_by": {
+                "employee_id": 5,
+                "employee_code": "EMP005",
+                "full_name": "Hoàng Văn Em",
+                "position": "Chuyên viên hành chính"
+              },
+              "department": {
+                "department_id": 5,
+                "department_code": "ADMIN",
+                "department_name": "Phòng Hành chính"
+              },
+              "upload_date": "2024-01-18T10:15:00Z",
+              "upload_date_display": "18/01/2024 10:15",
+              "last_action": {
+                "action_type": "UPLOAD",
+                "action_display": "Tải lên",
+                "performed_by": "Hoàng Văn Em",
+                "action_date": "2024-01-18T10:15:00Z",
+                "action_date_display": "18/01/2024 10:15"
+              },
+              "description": "Quyết định bổ nhiệm cán bộ",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 0,
+              "permissions": {
+                "can_read": true,
+                "can_download": false,
+                "can_edit": false,
+                "can_delete": false
+              }
+            }
+          ]
+        },
+        {
+          "category_info": {
+            "category_id": 4,
+            "category_code": "C2",
+            "category_name": "Mục C - Chỉ thị",
+            "category_description": "Các chỉ thị từ cấp trên",
+            "sort_order": 4,
+            "file_count": 0
+          },
+          "files": []
+        }
+      ],
+      "statistics": {
+        "total_files": 5,
+        "total_size": 3072000,
+        "total_size_display": "2.93 MB",
+        "total_downloads": 3,
+        "latest_upload": "2024-02-15T09:00:00Z",
+        "latest_upload_display": "15/02/2024 09:00"
+      }
+    },
+    "tab_b": {
+      "tab_info": {
+        "tab_id": 2,
+        "tab_code": "TAB_B",
+        "tab_name": "Tab B - Tài liệu kỹ thuật",
+        "tab_description": "Quản lý các tài liệu kỹ thuật",
+        "sort_order": 2,
+        "is_active": true
+      },
+      "categories": [
+        {
+          "category_info": {
+            "category_id": 5,
+            "category_code": "X",
+            "category_name": "Mục X - Thiết kế",
+            "category_description": "Bản vẽ thiết kế kỹ thuật",
+            "sort_order": 1,
+            "file_count": 2
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440006",
+              "file_name": "Bản vẽ thiết kế A01",
+              "original_filename": "thiet-ke-a01.dwg",
+              "file_extension": ".dwg",
+              "file_size": 2048000,
+              "file_size_display": "2.00 MB",
+              "mime_type": "application/acad",
+              "uploaded_by": {
+                "employee_id": 4,
+                "employee_code": "EMP004",
+                "full_name": "Phạm Thị Dung",
+                "position": "Kỹ sư kỹ thuật"
+              },
+              "department": {
+                "department_id": 4,
+                "department_code": "TECH",
+                "department_name": "Phòng Kỹ thuật"
+              },
+              "upload_date": "2024-01-20T10:15:00Z",
+              "upload_date_display": "20/01/2024 10:15",
+              "last_action": {
+                "action_type": "DOWNLOAD",
+                "action_display": "Tải xuống",
+                "performed_by": "Nguyễn Văn An",
+                "action_date": "2024-01-21T16:20:00Z",
+                "action_date_display": "21/01/2024 16:20"
+              },
+              "description": "Bản vẽ thiết kế sản phẩm A01",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 1,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": true,
+                "can_delete": true
+              }
+            },
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440007",
+              "file_name": "Bản vẽ thiết kế A02",
+              "original_filename": "thiet-ke-a02.dwg",
+              "file_extension": ".dwg",
+              "file_size": 2248000,
+              "file_size_display": "2.14 MB",
+              "mime_type": "application/acad",
+              "uploaded_by": {
+                "employee_id": 4,
+                "employee_code": "EMP004",
+                "full_name": "Phạm Thị Dung",
+                "position": "Kỹ sư kỹ thuật"
+              },
+              "department": {
+                "department_id": 4,
+                "department_code": "TECH",
+                "department_name": "Phòng Kỹ thuật"
+              },
+              "upload_date": "2024-01-22T14:30:00Z",
+              "upload_date_display": "22/01/2024 14:30",
+              "last_action": {
+                "action_type": "UPLOAD",
+                "action_display": "Tải lên",
+                "performed_by": "Phạm Thị Dung",
+                "action_date": "2024-01-22T14:30:00Z",
+                "action_date_display": "22/01/2024 14:30"
+              },
+              "description": "Bản vẽ thiết kế sản phẩm A02",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 0,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": true,
+                "can_delete": true
+              }
+            }
+          ]
+        },
+        {
+          "category_info": {
+            "category_id": 6,
+            "category_code": "V",
+            "category_name": "Mục V - Vận hành",
+            "category_description": "Tài liệu vận hành thiết bị",
+            "sort_order": 2,
+            "file_count": 1
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440008",
+              "file_name": "Hướng dẫn vận hành máy X1",
+              "original_filename": "van-hanh-may-x1.pdf",
+              "file_extension": ".pdf",
+              "file_size": 1512000,
+              "file_size_display": "1.44 MB",
+              "mime_type": "application/pdf",
+              "uploaded_by": {
+                "employee_id": 4,
+                "employee_code": "EMP004",
+                "full_name": "Phạm Thị Dung",
+                "position": "Kỹ sư kỹ thuật"
+              },
+              "department": {
+                "department_id": 4,
+                "department_code": "TECH",
+                "department_name": "Phòng Kỹ thuật"
+              },
+              "upload_date": "2024-01-25T11:45:00Z",
+              "upload_date_display": "25/01/2024 11:45",
+              "last_action": {
+                "action_type": "UPLOAD",
+                "action_display": "Tải lên",
+                "performed_by": "Phạm Thị Dung",
+                "action_date": "2024-01-25T11:45:00Z",
+                "action_date_display": "25/01/2024 11:45"
+              },
+              "description": "Hướng dẫn vận hành máy X1",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 0,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": true,
+                "can_delete": false
+              }
+            }
+          ]
+        },
+        {
+          "category_info": {
+            "category_id": 7,
+            "category_code": "E",
+            "category_name": "Mục E - Bảo trì",
+            "category_description": "Tài liệu bảo trì và sửa chữa",
+            "sort_order": 3,
+            "file_count": 1
+          },
+          "files": [
+            {
+              "file_id": "550e8400-e29b-41d4-a716-446655440009",
+              "file_name": "Lịch bảo trì Q1-2024",
+              "original_filename": "lich-bao-tri-q1-2024.xlsx",
+              "file_extension": ".xlsx",
+              "file_size": 256000,
+              "file_size_display": "250.00 KB",
+              "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+              "uploaded_by": {
+                "employee_id": 4,
+                "employee_code": "EMP004",
+                "full_name": "Phạm Thị Dung",
+                "position": "Kỹ sư kỹ thuật"
+              },
+              "department": {
+                "department_id": 4,
+                "department_code": "TECH",
+                "department_name": "Phòng Kỹ thuật"
+              },
+              "upload_date": "2024-01-30T09:20:00Z",
+              "upload_date_display": "30/01/2024 09:20",
+              "last_action": {
+                "action_type": "UPLOAD",
+                "action_display": "Tải lên",
+                "performed_by": "Phạm Thị Dung",
+                "action_date": "2024-01-30T09:20:00Z",
+                "action_date_display": "30/01/2024 09:20"
+              },
+              "description": "Lịch bảo trì quý 1/2024",
+              "version": 1,
+              "is_current_version": true,
+              "download_count": 0,
+              "permissions": {
+                "can_read": true,
+                "can_download": true,
+                "can_edit": true,
+                "can_delete": false
+              }
+            }
+          ]
+        },
+        {
+          "category_info": {
+            "category_id": 8,
+            "category_code": "B2",
+            "category_name": "Mục B - Biên bản",
+            "category_description": "Biên bản kiểm tra kỹ thuật",
+            "sort_order": 4,
+            "file_count": 0
+          },
+          "files": []
+        }
+      ],
+      "statistics": {
+        "total_files": 4,
+        "total_size": 6064000,
+        "total_size_display": "5.78 MB",
+        "total_downloads": 1,
+        "latest_upload": "2024-01-30T09:20:00Z",
+        "latest_upload_display": "30/01/2024 09:20"
+      }
+    }
+  },
+  "summary": {
+    "total_tabs": 2,
+    "total_categories": 8,
+    "total_files": 9,
+    "total_size": 9136000,
+    "total_size_display": "8.71 MB",
+    "total_downloads": 4,
+    "active_users": 4,
+    "latest_activity": "2024-02-15T09:00:00Z",
+    "latest_activity_display": "15/02/2024 09:00"
+  },
+  "user_permissions": {
+    "user_id": 1,
+    "user_name": "Nguyễn Văn An",
+    "role": "Admin",
+    "can_upload": true,
+    "can_manage_permissions": true,
+    "can_delete_files": true,
+    "accessible_departments": ["IT", "HR", "FINANCE", "TECH", "ADMIN"]
+  }
+}
